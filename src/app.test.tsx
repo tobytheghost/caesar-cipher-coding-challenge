@@ -5,7 +5,7 @@ describe('App', () => {
   it('should work as expected', () => {
     const { container } = render(<App />);
 
-    const element = screen.getByText('The Bots Frontend coding challenge');
+    const element = screen.getByText('Caesar cipher coding challenge');
 
     expect(element).toBeDefined();
   });
