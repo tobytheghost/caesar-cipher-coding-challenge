@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createEncrypt } from "../utils/cipher";
+import { createEncryptFunction } from "../utils/cipher";
 
 // Hacky but it works for this exercise
 const handleFormChange = (setOutput: (output: string) => void) => {
@@ -10,7 +10,7 @@ const handleFormChange = (setOutput: (output: string) => void) => {
     const input =
       form.querySelector<HTMLTextAreaElement>('[name="input"]')?.value;
     if (!shift || !input) return setOutput("");
-    const encrypt = createEncrypt(parseInt(shift.toString()));
+    const encrypt = createEncryptFunction(parseInt(shift.toString()));
     return setOutput(encrypt(input.toString()));
   };
 };
